@@ -121,16 +121,16 @@ class HomeTableViewCell: UITableViewCell {
         contentView.addSubview(userName)
         contentView.addSubview(userNickName)
         contentView.addSubview(tweets)
-        contentView.addSubview(likeButton)
-        contentView.addSubview(retweetButton)
-        contentView.addSubview(sharedButton)
-        contentView.addSubview(commentButton)
         contentView.addSubview(retweetsCount)
         contentView.addSubview(retweetLabel)
         contentView.addSubview(likesCount)
         contentView.addSubview(likeLabel)
         contentView.addSubview(quoteCount)
         contentView.addSubview(quoteLabel)
+        contentView.addSubview(likeButton)
+        contentView.addSubview(retweetButton)
+        contentView.addSubview(sharedButton)
+        contentView.addSubview(commentButton)
         
         profileImage.snp.makeConstraints { make in
             make.height.equalTo(80)
@@ -151,34 +151,49 @@ class HomeTableViewCell: UITableViewCell {
             make.leading.equalToSuperview().offset(10)
             make.trailing.equalToSuperview().offset(-5)
         }
-        likeButton.snp.makeConstraints { make in
-            make.top.equalTo(tweets.snp.bottom).offset(20)
-            make.bottom.equalToSuperview().offset(-5)
+        retweetsCount.snp.makeConstraints { make in
+            make.top.equalTo(tweets.snp.bottom).offset(10)
             make.leading.equalToSuperview().offset(55)
         }
+        retweetLabel.snp.makeConstraints { make in
+            make.top.equalTo(retweetsCount.snp.top)
+            make.leading.equalTo(retweetsCount.snp.trailing).offset(5)
+        }
+        likesCount.snp.makeConstraints { make in
+            make.top.equalTo(retweetsCount.snp.top)
+            make.leading.equalTo(retweetLabel.snp.trailing).offset(25)
+        }
+        likeLabel.snp.makeConstraints { make in
+            make.top.equalTo(retweetsCount.snp.top)
+            make.leading.equalTo(likesCount.snp.trailing).offset(5)
+        }
+        quoteCount.snp.makeConstraints { make in
+            make.top.equalTo(retweetsCount.snp.top)
+            make.leading.equalTo(likeLabel.snp.trailing).offset(25)
+        }
+        quoteLabel.snp.makeConstraints { make in
+            make.top.equalTo(retweetsCount.snp.top)
+            make.leading.equalTo(quoteCount.snp.trailing).offset(5)
+        }
+        likeButton.snp.makeConstraints { make in
+            make.top.equalTo(likeLabel.snp.bottom).offset(15)
+            make.bottom.equalToSuperview().offset(-10)
+            make.leading.equalTo(tweets.snp.leading).offset(55)
+        }
         retweetButton.snp.makeConstraints { make in
-            make.top.equalTo(tweets.snp.bottom).offset(20)
-            make.bottom.equalToSuperview().offset(-5)
+            make.top.equalTo(likeLabel.snp.bottom).offset(15)
+            make.bottom.equalToSuperview().offset(-10)
             make.leading.equalTo(likeButton.snp.trailing).offset(55)
         }
         sharedButton.snp.makeConstraints { make in
-            make.top.equalTo(tweets.snp.bottom).offset(20)
-            make.bottom.equalToSuperview().offset(-5)
+            make.top.equalTo(likeLabel.snp.bottom).offset(15)
+            make.bottom.equalToSuperview().offset(-10)
             make.leading.equalTo(retweetButton.snp.trailing).offset(55)
         }
         commentButton.snp.makeConstraints { make in
-            make.top.equalTo(tweets.snp.bottom).offset(20)
-            make.bottom.equalToSuperview().offset(-5)
+            make.top.equalTo(likeLabel.snp.bottom).offset(15)
+            make.bottom.equalToSuperview().offset(-10)
             make.leading.equalTo(sharedButton.snp.trailing).offset(55)
         }
-        retweetsCount.snp.makeConstraints { make in
-            make.top.equalTo(tweets.snp.bottom).offset(9)
-            make.leading.equalToSuperview().offset(20)
-        }
-        retweetLabel.snp.makeConstraints { make in
-            make.top.equalTo(tweets.snp.bottom).offset(9)
-            make.leading.equalTo(retweetsCount.snp.trailing).offset(10)
-        }
     }
-
 }

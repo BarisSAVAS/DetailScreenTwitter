@@ -93,11 +93,11 @@ class OtherUsersTableViewCell: UITableViewCell {
             make.leading.equalToSuperview().offset(10)
         }
         userName.snp.makeConstraints { make in
-            make.top.equalTo(profileImage.snp.top)
+            make.top.equalTo(profileImage.snp.top).offset(15)
             make.leading.equalTo(profileImage.snp.trailing).offset(10)
         }
         userNickName.snp.makeConstraints { make in
-            make.top.equalTo(profileImage.snp.top)
+            make.top.equalTo(profileImage.snp.top).offset(15)
             make.leading.equalTo(userName.snp.trailing).offset(10)
         }
         tweets.snp.makeConstraints { make in
