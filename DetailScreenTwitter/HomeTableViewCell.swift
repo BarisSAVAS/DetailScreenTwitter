@@ -72,33 +72,33 @@ class HomeTableViewCell: UITableViewCell {
     private let retweetsCount:UILabel = {
        let userNickName = UILabel()
         userNickName.text = "34"
-        userNickName.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 15.0)
+        userNickName.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 15.0)
         return userNickName
     }()
     private let retweetLabel:UILabel = {
         let userNickName = UILabel()
          userNickName.text = "Retweet"
-         userNickName.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 15.0)
+         userNickName.font = UIFont(name: "AppleSDGothicNeo-Light", size: 15.0)
          return userNickName
      }()
     //LikeCount
     private let likesCount:UILabel = {
        let userNickName = UILabel()
         userNickName.text = "34k"
-        userNickName.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 15.0)
+        userNickName.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 15.0)
         return userNickName
         }()
     private let likeLabel:UILabel = {
         let userNickName = UILabel()
          userNickName.text = "Like"
-         userNickName.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 15.0)
+         userNickName.font = UIFont(name: "AppleSDGothicNeo-Light", size: 15.0)
          return userNickName
      }()
     //QuoteCount
     private let quoteCount:UILabel = {
     let userNickName = UILabel()
      userNickName.text = "99"
-     userNickName.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 15.0)
+     userNickName.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 15.0)
      return userNickName
     }()
     private let quoteLabel:UILabel = {
@@ -149,7 +149,7 @@ class HomeTableViewCell: UITableViewCell {
         tweets.snp.makeConstraints { make in
             make.top.equalTo(profileImage.snp.bottom).offset(15)
             make.leading.equalToSuperview().offset(10)
-            make.trailing.equalToSuperview().offset(-5)
+            make.trailing.equalToSuperview().offset(-7)
         }
         retweetsCount.snp.makeConstraints { make in
             make.top.equalTo(tweets.snp.bottom).offset(10)
@@ -161,7 +161,7 @@ class HomeTableViewCell: UITableViewCell {
         }
         likesCount.snp.makeConstraints { make in
             make.top.equalTo(retweetsCount.snp.top)
-            make.leading.equalTo(retweetLabel.snp.trailing).offset(25)
+            make.leading.equalTo(retweetLabel.snp.trailing).offset(35)
         }
         likeLabel.snp.makeConstraints { make in
             make.top.equalTo(retweetsCount.snp.top)
@@ -169,7 +169,7 @@ class HomeTableViewCell: UITableViewCell {
         }
         quoteCount.snp.makeConstraints { make in
             make.top.equalTo(retweetsCount.snp.top)
-            make.leading.equalTo(likeLabel.snp.trailing).offset(25)
+            make.leading.equalTo(likeLabel.snp.trailing).offset(35)
         }
         quoteLabel.snp.makeConstraints { make in
             make.top.equalTo(retweetsCount.snp.top)
@@ -178,7 +178,7 @@ class HomeTableViewCell: UITableViewCell {
         likeButton.snp.makeConstraints { make in
             make.top.equalTo(likeLabel.snp.bottom).offset(15)
             make.bottom.equalToSuperview().offset(-10)
-            make.leading.equalTo(tweets.snp.leading).offset(55)
+            make.leading.equalTo(retweetsCount.snp.leading)
         }
         retweetButton.snp.makeConstraints { make in
             make.top.equalTo(likeLabel.snp.bottom).offset(15)

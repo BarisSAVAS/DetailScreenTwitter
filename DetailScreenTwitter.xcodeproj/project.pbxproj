@@ -64,6 +64,7 @@
 		AE23396829D9C85F00BDDD61 /* DetailScreenTwitter */ = {
 			isa = PBXGroup;
 			children = (
+				AE3CA5FF29DC4599000C7546 /* ViewControllers */,
 				AE23398C29DA2E7400BDDD61 /* ViewControllers */,
 				AE23398A29DA2E4C00BDDD61 /* Cells */,
 				AE23396929D9C85F00BDDD61 /* AppDelegate.swift */,
@@ -87,8 +88,15 @@
 		AE23398C29DA2E7400BDDD61 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AE23398429DA2CC600BDDD61 /* DetailViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AE3CA5FF29DC4599000C7546 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				AE23398629DA2D8500BDDD61 /* OtherUsersViewController.swift */,
+				AE23398429DA2CC600BDDD61 /* DetailViewController.swift */,
 				AE23397D29D9C8EB00BDDD61 /* HomeViewController.swift */,
 			);
 			name = ViewControllers;
