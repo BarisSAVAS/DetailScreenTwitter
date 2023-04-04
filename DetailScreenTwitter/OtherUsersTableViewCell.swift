@@ -38,7 +38,7 @@ class OtherUsersTableViewCell: UITableViewCell {
     //Tweets
     private let tweets:UILabel =  {
         let tweets = UILabel()
-        tweets.text = " Abi dediklerini en iyi sekilde yapmaya calısıyoruz bol bol ekstralarla kendimizi gelistiriyoruz sabah aksam kodddd jr.iOS developerlar geliyor"
+        tweets.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et mollis ex. Nam a semper erat. Quisque imperdiet tellus nulla, sed fringilla nibh tempor eget. Nulla vitae nisl sit amet sapien malesuada vehicula eget ac elit. Quisque imperdiet scelerisque semper. Maecenas tincidunt volutpat augue a fringilla. Donec ante lectus, sodales."
         tweets.numberOfLines = 0
         tweets.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 19.0)
         return tweets
