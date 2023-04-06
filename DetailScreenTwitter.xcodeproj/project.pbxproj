@@ -65,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				AE3CA5FF29DC4599000C7546 /* ViewControllers */,
-				AE23398C29DA2E7400BDDD61 /* ViewControllers */,
 				AE23398A29DA2E4C00BDDD61 /* Cells */,
 				AE23396929D9C85F00BDDD61 /* AppDelegate.swift */,
 				AE23396B29D9C85F00BDDD61 /* SceneDelegate.swift */,
@@ -83,13 +82,6 @@
 				AE23397F29D9CA4A00BDDD61 /* HomeTableViewCell.swift */,
 			);
 			name = Cells;
-			sourceTree = "<group>";
-		};
-		AE23398C29DA2E7400BDDD61 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		AE3CA5FF29DC4599000C7546 /* ViewControllers */ = {

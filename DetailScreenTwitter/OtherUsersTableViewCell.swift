@@ -11,7 +11,8 @@ import SnapKit
 class OtherUsersTableViewCell: UITableViewCell {
     
     static let identifier = "OtherUsersTableViewCell"
-    //MARK: UI Components
+    
+    // MARK: UI Components
     //ProfileImage
     private let profileImage: UIImageView = {
         let profileImage = UIImageView()
@@ -68,6 +69,9 @@ class OtherUsersTableViewCell: UITableViewCell {
         button.setImage(UIImage(named: "CommentIcon"), for: .normal)
         return button
     }()
+    
+    // MARK: View Lifecycle
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.configureUI()
@@ -76,8 +80,12 @@ class OtherUsersTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    //MARK: UI Constraints
-    private func configureUI(){
+    
+    
+    
+    // MARK: UI Constraints
+    
+    private func configureUI() {
         contentView.addSubview(profileImage)
         contentView.addSubview(userName)
         contentView.addSubview(userNickName)
